@@ -1,7 +1,7 @@
 # java-todos
 JDBC + SQLite
 
-> JDBC - Java Database Connectivity
+> [JDBC - Java Database Connectivity](http://docs.oracle.com/javase/tutorial/jdbc/basics/index.html)
 
 ### Output
 > Let's create a Todo's Application using Java and SQLite.
