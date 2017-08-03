@@ -2,6 +2,7 @@
 JDBC + SQLite
 
 > [JDBC - Java Database Connectivity](http://docs.oracle.com/javase/tutorial/jdbc/basics/index.html)
+> [SQLite - Embedded SQL database engine](https://www.sqlite.org/about.html)
 
 ### Output
 > Let's create a Todo's Application using Java and SQLite.
