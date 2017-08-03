@@ -107,6 +107,7 @@ public static boolean update(String table, String set, int id){
 ```
 
 ```java
+//Delete Record Method
 public static boolean delete(String table, int id){
     boolean result = false;
     try{
@@ -123,6 +124,7 @@ public static boolean delete(String table, int id){
 ```
 
 ```java
+//Read Record Method
 public static String[][] read(String table){
     String[][] records = null;
     try{
