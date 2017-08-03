@@ -145,7 +145,7 @@ public static String[][] read(String table){
         //Retrieve the record and store it to 2D Array "records"
         int row=0;
         while(rs.next()){                
-            for(int col=0,index=1;col&lt;totalColumns;col++,index++){
+            for(int col=0,index=1;col<totalColumns;col++,index++){
                 records[row][col] = rs.getObject(index).toString();
             }
             row++;
