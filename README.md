@@ -18,15 +18,15 @@ This part will cover the Todo's App Project setup which includes:
 * Test and Verify the Todo's App API
 
 #### Step 1 : Create new Java Application using Netbeans IDE
-![alt text][01]
-[01]: Midterm/Activity2/01.jpg "Logo Title Text 2"
+![step 1](https://github.com/clydeatuic/java-todos/blob/master/01.JPG)
+
 
 #### Step 2 : Setup SQLite Database Driver using Netbeans Services
-![alt text][02]
-[02]: Midterm/Activity2/02.jpg "Logo Title Text 2"
+![step 2](https://github.com/clydeatuic/java-todos/blob/master/02.JPG)
 
 #### Step 3 : Write a SQLite Class that handles the Todo's App API
 ```java
+	//Static Variables
     static java.sql.Connection conn  = null;
     static java.sql.Statement stmt = null;
     static String url = "jdbc:sqlite:<FILE>";
@@ -34,6 +34,7 @@ This part will cover the Todo's App Project setup which includes:
 ```
 
 ```java
+	//Open DB Session Method
     public static boolean openDB(){
         boolean result = false;
         try{
@@ -52,6 +53,7 @@ This part will cover the Todo's App Project setup which includes:
 ```
 
 ```java
+	//Close DB Session Method
     public static boolean closeDB(){
         boolean result = false;
         try{
@@ -69,6 +71,7 @@ This part will cover the Todo's App Project setup which includes:
 ```
 
 ```java
+	//Create Record Method
     public static boolean create(String table, String values){
         boolean result = false;
         try{
@@ -86,18 +89,7 @@ This part will cover the Todo's App Project setup which includes:
 ```
 
 ```java
-    if(SQLite.openDB()){
-        int id = 4; //If you reveive an error, probably sqlite detect duplicate ID value.
-        String task = "Task 4";
-        String isdone = "NO";
-        if(create("task","'"+id+"'"+","+"'"+task+"'"+","+"'"+isdone+"'")){
-            System.out.println("Inserted successfully!");
-        }
-        SQLite.closeDB();
-    }   
-```
-
-```java
+	//Update Record Method
     public static boolean update(String table, String set, int id){
         boolean result = false;
         try{
@@ -115,18 +107,6 @@ This part will cover the Todo's App Project setup which includes:
 ```
 
 ```java
-    //Test update method
-    if(SQLite.openDB()){
-        int id = 4;
-        String isdone = "YES";
-        if(update("task", "ISDONE='"+isdone+"'", id)){
-            System.out.println("Updated successfully!");
-        }
-        SQLite.closeDB();
-    } 
-```
-
-```java
     public static boolean delete(String table, int id){
         boolean result = false;
         try{
@@ -140,17 +120,6 @@ This part will cover the Todo's App Project setup which includes:
         }
         return result;
     } 
-```
-
-```java
-        Test delete method
-        if(SQLite.openDB()){
-            int id = 4;
-            if(delete("task", id)){
-                System.out.println("Deleted successfully!");
-            }
-            SQLite.closeDB();
-        } 
 ```
 
 ```java
@@ -187,15 +156,58 @@ This part will cover the Todo's App Project setup which includes:
     }
 ```
 
+#### Step 4 : Test and Verify the Todo's App API
+
 ```java
-        //Test read method
-        if(SQLite.openDB()){
-            String[][] r = read("task");
-            System.out.println("Task ID:" + r[0][0]);
-            System.out.println("Task NAME:" + r[0][1]);
-            System.out.println("Task ISDONE?:" + r[0][2]);
-            SQLite.closeDB();
-        }
+	//Main method (Optional! This is intended for testing...)
+	public static void main(String [] args){
+		//Test code snippets here...
+	}
 ```
 
-#### Step 4 : Test and Verify the Todo's App API
+```java
+	//Test code snippet for openDB and closeDB methods
+    if(SQLite.openDB()){
+        int id = 4; //If you reveive an error, probably sqlite detect duplicate ID value.
+        String task = "Task 4";
+        String isdone = "NO";
+        if(create("task","'"+id+"'"+","+"'"+task+"'"+","+"'"+isdone+"'")){
+            System.out.println("Inserted successfully!");
+        }
+        SQLite.closeDB();
+    }   
+```
+
+```java
+    //Test code snippet for update method
+    if(SQLite.openDB()){
+        int id = 4;
+        String isdone = "YES";
+        if(update("task", "ISDONE='"+isdone+"'", id)){
+            System.out.println("Updated successfully!");
+        }
+        SQLite.closeDB();
+    } 
+```
+
+```java
+    //Test code snippet for delete method
+    if(SQLite.openDB()){
+        int id = 4;
+        if(delete("task", id)){
+            System.out.println("Deleted successfully!");
+        }
+        SQLite.closeDB();
+    } 
+```
+
+```java
+    //Test code snippet for read method
+    if(SQLite.openDB()){
+        String[][] r = read("task");
+        System.out.println("Task ID:" + r[0][0]);
+        System.out.println("Task NAME:" + r[0][1]);
+        System.out.println("Task ISDONE?:" + r[0][2]);
+        SQLite.closeDB();
+    }
+```
