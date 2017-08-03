@@ -170,7 +170,7 @@ public static void main(String [] args){
 ```java
 //Test code snippet for openDB and closeDB methods
 if(SQLite.openDB()){
-    int id = 4; //If you reveive an error, probably sqlite detect duplicate ID value.
+    int id = 4; //If you receive an error, probably sqlite detect duplicate ID value.
     String task = "Task 4";
     String isdone = "NO";
     if(create("task","'"+id+"'"+","+"'"+task+"'"+","+"'"+isdone+"'")){
@@ -213,3 +213,6 @@ if(SQLite.openDB()){
     SQLite.closeDB();
 }
 ```
+#### Done for Part 1
+
+> Feel free to create an issue and if you find it interesting drop a star. Thanks! :octocat:
