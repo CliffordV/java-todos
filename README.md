@@ -2,6 +2,6 @@
 
 ## Todos
 
-[] Learning Outcome
-[] Steps
-[] Screencast
+- [ ] Learning Outcome
+- [ ] Steps
+- [ ] Screencast
