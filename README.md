@@ -216,3 +216,17 @@ if(SQLite.openDB()){
 #### Done for Part 1
 
 > Feel free to create an issue and if you find it interesting drop a star. Thanks! :octocat:
+
+### Part 2 (Front End Dev't Perspective)
+
+This part will cover the Todo's App Project User Interface which includes:
+
+* Create JFrame that uses components (JTextField, JButton, JLabel, JTable etc.)
+* Create a CRUD User Interfaces:
+ * UI for CREATE Task
+ * UI for RETRIEVE/READ Task
+ * UI for UPDATE Task
+ * UI for DELETE Task
+* Create a Lastname1_Lastname2_TodosAPP.jar file
+
+Note: By Pair (Front-End and Back-End)
